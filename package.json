@@ -1,17 +1,7 @@
 {
-  "name": "vercel-static-router",
-  "version": "4.2.7",
-  "description": "High-performance edge routing utility for request distribution and load balancing",
+  "name": "verceay",
+  "version": "1.0.0",
+  "description": "Edge-runtime XHTTP relay for Xray/V2Ray on Vercel",
   "private": true,
-  "license": "ISC",
-  "keywords": ["router", "edge", "distribution", "balancer", "cdn-optimized"],
-  "author": "Edge Networks Team",
-  "homepage": "https://github.com/vercel-routing/edge-router",
-  "bugs": {
-    "url": "https://github.com/vercel-routing/edge-router/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vercel-routing/edge-router.git"
-  }
+  "license": "MIT"
 }
