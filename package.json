@@ -1,5 +1,5 @@
 {
-  "name": "verceay",
+  "name": "vercelrey",
   "version": "1.0.0",
   "description": "Edge-runtime XHTTP relay for Xray/V2Ray on Vercel",
   "private": true,
