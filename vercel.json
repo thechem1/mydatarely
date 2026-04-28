@@ -1,8 +1,25 @@
 {
   "version": 2,
-  "name": "vercel-xhttp-relay",
+  "name": "edge-request-processor",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index" }
+    { "source": "/v1/(.*)", "destination": "/api/handler" },
+    { "source": "/health", "destination": "/api/status" },
+    { "source": "/check/(.*)", "destination": "/api/validator" }
   ],
-  "trailingSlash": false
+  "trailingSlash": false,
+  "functions": {
+    "api/*.js": {
+      "runtime": "edge",
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
+  ]
 }
